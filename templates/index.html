@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <!--===============================================================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--===============================================================================================-->
+    <meta name="description" content="Spam SMS Detection">
+    <!--===============================================================================================-->
+    <meta name="author" content="Spam SMS Detection">
+    <!--===============================================================================================-->
+    <meta name="keywords" content="Spam SMS Detection">
+    <!--===============================================================================================-->
+    <!-- Title Page-->
+    <title>Spam SMS Detection || Yogesh Nile</title>
+    <!--===============================================================================================-->
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!--===============================================================================================-->
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Check Your SMS</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" name="getmgs" action="/result">
+                     
+                      
+                        <div class="form-row">
+                            <div class="name">Message</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="message" placeholder="Enter a SMS to check spam or not."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                    <center><button class="btn btn--radius-2 btn--blue-2" type="submit">Check Out</button></center>
+                	</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--===============================================================================================-->
+    <!-- Jquery JS-->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+<!--===============================================================================================-->
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    <!--===============================================================================================-->
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->

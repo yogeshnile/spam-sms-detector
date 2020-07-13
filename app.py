@@ -1,4 +1,5 @@
 #Import Dependentias
+from flask import Flask, render_template, request, redirect
 import pickle
 import numpy as np
 import nltk
@@ -29,12 +30,30 @@ def predict_spam(sample_message):
     final_message = ' '.join(final_message)
     temp = cv.transform([final_message]).toarray()
     return classifier.predict(temp)
-
 result = ['Wait a minute, this is a SPAM!','Ohhh, this is a normal message.']
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+	return render_template('index.html')
+
+@app.route('/result', methods=['POST'])
+def predict():
+    if request.method == 'POST':
+        message = request.form['message']
+        if not message == "":
+            if predict_spam(msg):
+                return render_template('result.html', result = 0)
+            else:
+                return render_template('result.html', result = 1)
+        else:
+            pass
+
+
 
 msg = "Hi! You are pre-qulified for Premium SBI Credit Card. Also get Rs.500 worth Amazon Gift Card*, 10X Rewards Point* & more. Click "
 
-if predict_spam(msg):
-    print(result[0])
-else:
-    print(result[1])
+
+
+app.run(debug=True)
