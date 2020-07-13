@@ -30,7 +30,6 @@ def predict_spam(sample_message):
     final_message = ' '.join(final_message)
     temp = cv.transform([final_message]).toarray()
     return classifier.predict(temp)
-result = ['Wait a minute, this is a SPAM!','Ohhh, this is a normal message.']
 
 app = Flask(__name__)
 
@@ -43,17 +42,12 @@ def predict():
     if request.method == 'POST':
         message = request.form['message']
         if not message == "":
-            if predict_spam(msg):
+            if predict_spam(message):
                 return render_template('result.html', result = 0)
             else:
                 return render_template('result.html', result = 1)
         else:
             pass
 
-
-
-msg = "Hi! You are pre-qulified for Premium SBI Credit Card. Also get Rs.500 worth Amazon Gift Card*, 10X Rewards Point* & more. Click "
-
-
-
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

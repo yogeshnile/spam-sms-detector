@@ -32,22 +32,23 @@
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-heading">
-                    <h2 class="title">Check Your SMS</h2>
+                    <h2 class="title">Get Your Result</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" name="getmgs" action="/result">
-                        <div class="form-row">
-                            <div class="name">Message</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <textarea class="textarea--style-6" name="message" placeholder="Enter a SMS to check spam or not." required="black"></textarea>
-                                </div>
-                            </div>
+                    {% if result == 0 %}
+                        <div class="alert alert-danger" role="alert">
+                                <center><b>Wait a minute, this is a SPAM!</b></center>
                         </div>
-                        <div class="card-footer">
-                    <center><button class="btn btn--radius-2 btn--blue-2" type="submit">Check Out</button></center>
-                	</div>
-                    </form>
+                    
+                    {% else %}
+                        <div class="alert alert-success" role="alert">
+                                <center><b>Ohhh, this is a normal message.</b></center>
+                        </div>
+                    {% endif %}
+
+                <div class="card-footer">
+                    <a href="/"><center><button class="btn btn--radius-2 btn--blue-2" type="submit">Back to Home</button></center></a>
+                    </div>
                 </div>
             </div>
         </div>
