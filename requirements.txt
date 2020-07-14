@@ -7,7 +7,6 @@ MarkupSafe==1.1.1
 nltk==3.5
 numpy==1.19.0
 pandas==1.0.5
-pkg-resources==0.0.0
 python-dateutil==2.8.1
 pytz==2020.1
 regex==2020.6.8
