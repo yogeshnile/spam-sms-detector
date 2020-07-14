@@ -37,17 +37,19 @@ app = Flask(__name__)
 def home():
 	return render_template('index.html')
 
-@app.route('/result', methods=['POST'])
+@app.route('/result', methods=['POST','GET'])
 def predict():
     if request.method == 'POST':
         message = request.form['message']
         if not message == "":
             if predict_spam(message):
-                return render_template('result.html', result = 0)
+                return render_template('index.html', result = 0, message = message)
             else:
-                return render_template('result.html', result = 1)
+                return render_template('index.html', result = 1, message = message)
         else:
-            pass
+            return render_template('index.html')
+    else:
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
