@@ -1,4 +1,4 @@
-# spam sms detector :notebook:
+# spam sms detector :notebook: &nbsp;[![](https://camo.githubusercontent.com/17fa56d1fbad7bb4082c9711a77b984b85e79446/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e362d627269676874677265656e2e737667)](https://python.org)
 In this repo i have created a SMS Spam Prediction project in machine learning using NLP, and i am using [nltk](https://pypi.org/project/nltk/) Library for NLP. Deployment on Heroku app.
 
  - [[Jupyter Notebook]](https://github.com/yogeshnile/SPAM-SMS-Prediction)
