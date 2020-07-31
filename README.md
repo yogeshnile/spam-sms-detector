@@ -10,14 +10,23 @@ In this repo i have created a SMS Spam Prediction project in machine learning us
   - Day by day people get a lot of sms, In those sms include are spam and helpful message. In today's runaway life we don't have enough time to recognize these sms whether it is spam or not, so i have develop a machine learning programme using kaggle dataset which will split the sms. Hope this programme are helpful for you. 
 
 # How to run the project? :thinking:
-  - Clone github repository in your local system  ```git clone https://github.com/yogeshnile/spam-sms-detector.git```
-  - Move in spam-sms-detector repository  ```cd spam-sms-detector```
-  - Create new virtual python environment  ```python3 -m venv venv```
-  - Activate virtual python environment  ```source venv/bin/activate```
-  - Install all the libraries mentioned in [requirements.txt](https://github.com/yogeshnile/spam-sms-detector/blob/master/requirements.txt)  using  ```pip install -r requirements.txt```
-  - Run FlaskApp file  ```python app.py```
+**1).** Run all command manually
+  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/spam-sms-detector.git`
+  - Move in spam-sms-detector repository  `cd spam-sms-detector`
+  - Create new virtual python environment  `python3 -m venv venv`
+  - Activate virtual python environment  `source venv/bin/activate`
+  - Install all the libraries mentioned in [requirements.txt](https://github.com/yogeshnile/spam-sms-detector/blob/master/requirements.txt)  using  `pip install -r requirements.txt`
+  - Run FlaskApp file  `python app.py`
   - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
-  - Hurray! That's it.
+  - Hurray! That's it. <br>
+
+
+**2).** Run Shell Script
+  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/spam-sms-detector.git`
+  - Give execute permission to [spam-sms-detector.sh](https://github.com/yogeshnile/spam-sms-detector/blob/master/spam-sms-detector.sh) file via  `chmod +x spam-sms-detector.sh`
+  - Run spam-sms-detector.sh file using `./spam-sms-detector.sh`
+  - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
+  - Finished...
 
 # Directory Tree :cactus:
 ```bash
