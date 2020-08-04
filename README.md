@@ -22,8 +22,8 @@ In this repo i have created a SMS Spam Prediction project in machine learning us
 
 
 **2).** Run Shell Script
-  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/spam-sms-detector.git`
-  - Give execute permission to [spam-sms-detector.sh](https://github.com/yogeshnile/spam-sms-detector/blob/master/spam-sms-detector.sh) file via  `chmod +x spam-sms-detector.sh`
+  - Clone github repository in your local system  `git clone https://github.com/yogeshnile/unix.git`
+  - Give execute permission to [spam-sms-detector.sh](https://github.com/yogeshnile/unix/blob/master/spam-sms-detector.sh) file via  `chmod +x spam-sms-detector.sh`
   - Run spam-sms-detector.sh file using `./spam-sms-detector.sh`
   - Go to your browser and type http://127.0.0.1:5000/ in the address bar.
   - Finished...
